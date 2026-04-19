@@ -1,26 +1,43 @@
-# assistente-voz-whisper-chatgpt
-Projeto final do curso da DIO: 
-Assistente de voz inteligente que utiliza Whisper para transcrição, GPT para processamento de linguagem natural e gTTS para síntese de voz. Desenvolvido em Python durante o laboratório da DIO.
+🎙️ Assistente de Voz Inteligente (Whisper + ChatGPT)
+Este projeto é um assistente virtual integrado desenvolvido durante o laboratório da DIO. Ele é capaz de capturar áudio, transcrever, processar uma resposta inteligente via ChatGPT e retornar a resposta sintetizada em áudio.
 
-🎙️ Assistente de Voz com IA: Whisper & ChatGPT
-Este projeto é um assistente virtual completo capaz de ouvir, entender e responder por voz. O fluxo de trabalho integra tecnologias de ponta para processamento de áudio e linguagem natural.
+🚀 Como funciona?
+O pipeline de processamento foi desenhado para seguir um fluxo contínuo de IA:
+
+Captura (Frontend): Interface JavaScript no Google Colab captura o áudio do microfone.
+
+Transcrição (STT): OpenAI Whisper processa o áudio e converte em texto.
+
+Processamento (LLM): ChatGPT (GPT-3.5/4o) analisa a entrada e gera uma resposta contextual.
+
+Síntese (TTS): gTTS (Google Text-to-Speech) converte a resposta textual em um arquivo de áudio.
 
 🛠️ Tecnologias Utilizadas
-Python: Linguagem base do projeto.
+TecnologiaFunçãoPythonLinguagem principal do pipeline.OpenAI WhisperTranscrição de fala para texto (Speech-to-Text).OpenAI APIInteligência Artificial para processamento de linguagem.gTTSSíntese de voz (Text-to-Speech).JavaScriptIntegração da API de microfone no navegador.
 
-OpenAI Whisper: Para transcrição de áudio em texto (STT).
+⚙️ Como executar
+Como o projeto foi desenvolvido no Google Colab, siga estes passos para configurar o ambiente:
 
-OpenAI ChatGPT API: Para processamento e geração de respostas inteligentes.
+Chave da API:
 
-gTTS (Google Text-to-Speech): Para conversão de texto em fala (TTS).
+Obtenha sua OPENAI_API_KEY na plataforma da OpenAI.
 
-JavaScript: Para captura de áudio via navegador no ambiente Colab.
+No Google Colab, vá em "Segredos" (ícone de chave na lateral).
 
-🚀 Etapas do Projeto
-Gravação de áudio via Web API.
+Adicione um novo segredo com o nome OPENAI_API_KEY e cole o valor da sua chave.
 
-Transcrição precisa com o modelo Whisper.
+Ative a opção "Notebook access" (Acesso ao notebook).
 
-Consulta e inteligência via API do ChatGPT.
+Execução:
 
-Sintetização da resposta em voz humana.
+Abra o arquivo .ipynb no Google Colab.
+
+Conecte-se a um ambiente de execução (GPU é recomendada para o Whisper).
+
+Execute as células sequencialmente.
+
+📦 Estrutura do Repositório
+├── Assistente_de_Voz.ipynb  # Notebook principal com o fluxo de IA
+├── README.md                # Documentação do projeto
+└── requirements.txt         # Dependências do sistema (opcional)
+
